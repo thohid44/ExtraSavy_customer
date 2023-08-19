@@ -1,3 +1,7 @@
 {
+<<<<<<< HEAD
     "cmake.sourceDirectory": "F:/ExtraSavy_customer/windows"
+=======
+    "cmake.sourceDirectory": "D:/extrasavy_customer/linux"
+>>>>>>> 712b42d93eecdf0d5d294fd16869d50d1129bd1a
 }
