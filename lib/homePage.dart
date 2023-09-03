@@ -32,8 +32,10 @@ class _HomePageState extends State<HomePage> {
                       Icons.search,
                       color: Colors.white,
                     ),
-                  ), 
-                  SizedBox(width: 10.w,),
+                  ),
+                  SizedBox(
+                    width: 10.w,
+                  ),
                   Container(
                     height: 35.h,
                     width: 35.w,
@@ -43,51 +45,45 @@ class _HomePageState extends State<HomePage> {
                       color: Colors.white,
                     ),
                   ),
-              SizedBox(width: 15.w,),
-                  Container(
-                  
-                 
-                    decoration: BoxDecoration(
-                   
-                    ),
-            
-                    child: Text("Home",style: GoogleFonts.robotoSerif(color: Colors.white, fontSize: 20.sp),),
-                  ), 
-              SizedBox(width: 15.w,),
-                    InkWell(
-                  onTap: (){
-            
-                  },
-                  child: Container(
-                    height: 35.h, 
-                    width: 35.w,
-                   
-                    child: Image.asset("assets/mode.png")),
-                ),
-                  SizedBox(width: 5.w,),
-            
-                     Container(
-                    height: 35.h,
-                    width: 35.w,
-                    decoration: BoxDecoration(
-                      border: Border.all(color:Colors.white), 
-                      borderRadius: BorderRadius.circular(50.r)
-                    ),
-            
-                    child: Image.asset("assets/profile.png")
+                  SizedBox(
+                    width: 15.w,
                   ),
-            
+                  Container(
+                    decoration: BoxDecoration(),
+                    child: Text(
+                      "Home",
+                      style: GoogleFonts.robotoSerif(
+                          color: Colors.white, fontSize: 20.sp),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 15.w,
+                  ),
+                  InkWell(
+                    onTap: () {},
+                    child: Container(
+                        height: 35.h,
+                        width: 35.w,
+                        child: Image.asset("assets/mode.png")),
+                  ),
+                  SizedBox(
+                    width: 5.w,
+                  ),
+                  Container(
+                      height: 35.h,
+                      width: 35.w,
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.white),
+                          borderRadius: BorderRadius.circular(50.r)),
+                      child: Image.asset("assets/profile.png")),
                 ],
               ),
             ),
-
             Container(
               margin: EdgeInsets.only(left: 30, right: 30, top: 20),
               padding: EdgeInsets.all(10),
-              decoration: BoxDecoration(color: whiteColor, 
-              
-              borderRadius: BorderRadius.circular(10.r)
-              ),
+              decoration: BoxDecoration(
+                  color: whiteColor, borderRadius: BorderRadius.circular(10.r)),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -144,122 +140,152 @@ class _HomePageState extends State<HomePage> {
             SizedBox(
               height: 30,
             ),
-            // ClipPath(
-            //   clipper: Clip1Clipper(),
-            //   child: Container(
-            //     height: 100,
-            //     width: 100,
-            //     decoration: BoxDecoration(
-            //       color: Colors.black,
-            //     ),
-            //     child: Text(
-            //       "50% OFF",
-            //       style: TextStyle(color: Colors.white),
-            //     ),
-            //   ),
-            // )
-
-            Expanded(
-              child: Container(
-                width: double.infinity,
-                margin: EdgeInsets.symmetric(horizontal: 10.w),
-                    
-            
-                decoration: BoxDecoration(
+            Container(
+             
+              
+              padding: EdgeInsets.only(left: 20.w, top: 30.h),
+              decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.only(topLeft: Radius.circular(50.r),
-                  topRight: Radius.circular(50.r)
-                  )
-                ),
-            
-             child: Column(
-              children: [
-
-                Container(
-                  height: 140.h,
-                  child: ListView(
-                    scrollDirection: Axis.horizontal,
-                    children: [
-                      Container(
-                        alignment: Alignment.topCenter,
-                        height: 151.h, 
-                        width: 165.w,
-                         margin: EdgeInsets.symmetric(horizontal: 5.w),
-                          
-                            
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(50.r),
+                      topRight: Radius.circular(50.r))),
+              child: Container(
+                height: 140.h,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: 3,
+                  itemBuilder: (context, index) {
+                    return Container(
+                      alignment: Alignment.topCenter,
+                      height: 151.h,
+                      width: 165.w,
+                      margin: EdgeInsets.symmetric(
+                        horizontal: 5.w,
+                      ),
                       decoration: BoxDecoration(
                         color: Colors.grey,
-                       
                       ),
                       child: Row(
                         children: [
                           Container(
-                            width: 100.w, 
+                            width: 100.w,
                             color: Colors.red,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                          
                                 Container(
-                                  alignment: Alignment.center,
-                                  height: 35.h,
-                                  margin: EdgeInsets.all(10),
-                             width: 80.w,
-                            decoration: BoxDecoration(
-                                          color: Color(0xff4285F4), 
-                            ),
-                                      
-                            child: Text("Lite", style: GoogleFonts.robotoSerif(
-                              fontSize: 15.sp, fontWeight: FontWeight.w600, color: Colors.white
-                            ),)
-                                            ),
-                                            SizedBox(height: 10.h), 
-                               Container(
-                                 padding: EdgeInsets.only(left: 5.w )
-                                 ,
-                                          
-                            decoration: BoxDecoration(
-                                       
-                            ),
-                                      
-                            child: Text("Only assigned Offer", style: GoogleFonts.robotoSerif(
-                              fontSize: 13.sp, fontWeight: FontWeight.w400, color: Colors.white
-                            ),)
-                                            ),
+                                    alignment: Alignment.center,
+                                    height: 35.h,
+                                    margin: EdgeInsets.all(10),
+                                    width: 80.w,
+                                    decoration: BoxDecoration(
+                                      color: Color(0xff4285F4),
+                                    ),
+                                    child: Text(
+                                      "Lite",
+                                      style: GoogleFonts.robotoSerif(
+                                          fontSize: 15.sp,
+                                          fontWeight: FontWeight.w600,
+                                          color: Colors.white),
+                                    )),
+                                SizedBox(height: 10.h),
+                                Container(
+                                    padding: EdgeInsets.only(left: 5.w),
+                                    decoration: BoxDecoration(),
+                                    child: Text(
+                                      "Only assigned Offer",
+                                      style: GoogleFonts.robotoSerif(
+                                          fontSize: 13.sp,
+                                          fontWeight: FontWeight.w400,
+                                          color: Colors.white),
+                                    )),
                               ],
                             ),
                           ),
-                
                           Container(
-                              width: 60.w, 
-                            
-                              child:       ClipPath(
-              clipper: Clip1Clipper(),
-              child: Container(
-                padding: EdgeInsets.only(top: 0),
-                height: 50,
-                width: 50,
-                decoration: BoxDecoration(
-                  color: Color(0xff494646)
-                // ),
-                // child: Text(
-                //   "50% OFF",
-                //   style: TextStyle(color: Colors.white),
-                 ),
-              ),
-            ),
+                            width: 65.w,
+                            alignment: Alignment.topRight,
+                            child: ClipPath(
+                              clipper: Clip1Clipper(),
+                              child: Container(
+                                padding: EdgeInsets.only(top: 0),
+                                height: 60,
+                                width: 60,
+                                decoration: BoxDecoration(
+                                    color: Color(0xff494646)
+                                    // ),
+                                    // child: Text(
+                                    //   "50% OFF",
+                                    //   style: TextStyle(color: Colors.white),
+                                    ),
+                              ),
+                            ),
                           ),
                         ],
                       ),
-                      ),
-                    ],
-                  ),
-                )
-              ],
-             ),
-              
+                    );
+                  },
+                ),
               ),
-            )
+            ),
+            
+                      Container(
+                      height: 120.h,
+                    
+                      decoration: BoxDecoration(
+                        color: Colors.white
+                      ),
+                      child: Column(
+                        children: [
+                           Container(
+                                          alignment: Alignment.center,
+                                          height: 39.h,
+                                         
+                                          width: 120.w,
+                                          decoration: BoxDecoration(
+                                            color: Color(0xffFBBC04),
+                                          ),
+                                          child: Text(
+                                            "Premium",
+                                            style: GoogleFonts.robotoSerif(
+                                                fontSize: 18.sp,
+                                                fontWeight: FontWeight.w600,
+                                                color: Colors.white),
+                                          )),
+                                        
+                                           Container(
+                                          alignment: Alignment.center,
+                                          height: 39.h,
+                                         
+                                      
+                                          decoration: BoxDecoration(
+                                        
+                                          ),
+                                          child: Text(
+                                            "Include all Standard Offer with New Offer",
+                                            style: GoogleFonts.robotoSerif(
+                                                fontSize: 15.sp,
+                                                fontWeight: FontWeight.w600,
+                                                color: Colors.black),
+                                          )),
+                                           Container(
+                                          alignment: Alignment.center,
+                                          height: 39.h,
+                                         
+                                      
+                                          decoration: BoxDecoration(
+                                          
+                                          ),
+                                          child: Text(
+                                            "** All offer is specified for specific Client Category. ",
+                                            style: GoogleFonts.robotoSerif(
+                                                fontSize: 13.sp,
+                                                fontWeight: FontWeight.w600,
+                                                color: Colors.black),
+                                          )),
+                        ],
+                      ),
+                    )
           ],
         ),
       ),
