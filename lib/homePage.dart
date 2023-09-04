@@ -15,296 +15,107 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: bgColor,
-        body: Column(
+        backgroundColor: Colors.white,
+        body: ListView(
+
+
           children: [
+            
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 10.w),
-              child: Row(
-                children: [
-                  Container(
-                    height: 35.h,
-                    width: 35.w,
-                    decoration: BoxDecoration(
-                        border: Border.all(color: Colors.white),
-                        borderRadius: BorderRadius.circular(50.r)),
-                    child: Icon(
-                      Icons.search,
-                      color: Colors.white,
-                    ),
-                  ),
-                  SizedBox(
-                    width: 10.w,
-                  ),
-                  Container(
-                    height: 35.h,
-                    width: 35.w,
-                    decoration: BoxDecoration(),
-                    child: Icon(
-                      Icons.notifications,
-                      color: Colors.white,
-                    ),
-                  ),
-                  SizedBox(
-                    width: 15.w,
-                  ),
-                  Container(
-                    decoration: BoxDecoration(),
-                    child: Text(
-                      "Home",
-                      style: GoogleFonts.robotoSerif(
-                          color: Colors.white, fontSize: 20.sp),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 15.w,
-                  ),
-                  InkWell(
-                    onTap: () {},
-                    child: Container(
-                        height: 35.h,
-                        width: 35.w,
-                        child: Image.asset("assets/mode.png")),
-                  ),
-                  SizedBox(
-                    width: 5.w,
-                  ),
-                  Container(
-                      height: 35.h,
-                      width: 35.w,
-                      decoration: BoxDecoration(
-                          border: Border.all(color: Colors.white),
-                          borderRadius: BorderRadius.circular(50.r)),
-                      child: Image.asset("assets/profile.png")),
-                ],
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.only(left: 30, right: 30, top: 20),
-              padding: EdgeInsets.all(10),
-              decoration: BoxDecoration(
-                  color: whiteColor, borderRadius: BorderRadius.circular(10.r)),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    width: 90,
-                    child: Column(
-                      children: [
-                        Container(
-                          child: Image.asset("assets/reward.png"),
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Container(
-                          child: Text(
-                            "Total Point",
-                            textAlign: TextAlign.center,
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                  Container(
-                    width: 90,
-                    child: Column(
-                      children: [
-                        Container(
-                          child: Image.asset("assets/transaction.png"),
-                        ),
-                        Text(
-                          "Today Transactions",
-                          textAlign: TextAlign.center,
-                        )
-                      ],
-                    ),
-                  ),
-                  Container(
-                    width: 90,
-                    child: Column(
-                      children: [
-                        Container(
-                          child: Image.asset("assets/entrepreneur 1.png"),
-                        ),
-                        Text(
-                          "Total Merchant",
-                          textAlign: TextAlign.center,
-                        )
-                      ],
-                    ),
-                  )
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 30,
-            ),
-            Container(
-             
-              
-              padding: EdgeInsets.only(left: 20.w, top: 30.h),
-              decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(50.r),
-                      topRight: Radius.circular(50.r))),
-              child: Container(
-                height: 140.h,
-                child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: 3,
-                  itemBuilder: (context, index) {
-                    return Container(
-                      alignment: Alignment.topCenter,
-                      height: 151.h,
-                      width: 165.w,
-                      margin: EdgeInsets.symmetric(
-                        horizontal: 5.w,
-                      ),
-                      decoration: BoxDecoration(
-                        color: Colors.grey,
-                      ),
-                      child: Row(
+              alignment: Alignment.center,
+              margin: EdgeInsets.symmetric(horizontal: 15.w),
+              child: Card(
+                elevation: 5,
+                child: Row(
+                  children: [
+                    Container(
+                      width: 230.w,
+                      height: 200.h,
+                   
+                      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Container(
-                            width: 100.w,
-                            color: Colors.red,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Container(
-                                    alignment: Alignment.center,
-                                    height: 35.h,
-                                    margin: EdgeInsets.all(10),
-                                    width: 80.w,
-                                    decoration: BoxDecoration(
-                                      color: Color(0xff4285F4),
-                                    ),
-                                    child: Text(
-                                      "Lite",
-                                      style: GoogleFonts.robotoSerif(
-                                          fontSize: 15.sp,
-                                          fontWeight: FontWeight.w600,
-                                          color: Colors.white),
-                                    )),
-                                SizedBox(height: 10.h),
-                                Container(
-                                    padding: EdgeInsets.only(left: 5.w),
-                                    decoration: BoxDecoration(),
-                                    child: Text(
-                                      "Only assigned Offer",
-                                      style: GoogleFonts.robotoSerif(
-                                          fontSize: 13.sp,
-                                          fontWeight: FontWeight.w400,
-                                          color: Colors.white),
-                                    )),
-                              ],
-                            ),
-                          ),
-                          Container(
-                            width: 65.w,
-                            alignment: Alignment.topRight,
-                            child: ClipPath(
-                              clipper: Clip1Clipper(),
-                              child: Container(
-                                padding: EdgeInsets.only(top: 0),
-                                height: 60,
-                                width: 60,
-                                decoration: BoxDecoration(
-                                    color: Color(0xff494646)
-                                    // ),
-                                    // child: Text(
-                                    //   "50% OFF",
-                                    //   style: TextStyle(color: Colors.white),
-                                    ),
-                              ),
-                            ),
-                          ),
+                          
+                      Container(
+                      width: 100.w,
+                      margin: EdgeInsets.only(top: 10.h),
+                      height: 35.h,
+                     alignment: Alignment.center,
+                     decoration: BoxDecoration(
+                       color: Color(0xffFBBC04),
+                       borderRadius: BorderRadius.circular(5.r)
+                     ),
+                     child: Text("Premium", 
+                     style: GoogleFonts.robotoSerif(
+                      color: Colors.white, 
+                      fontSize: 15.sp, fontWeight: FontWeight.bold
+                     ),),
+                    ),
+
+                           Container(
+                      width: 225.w,
+                      margin: EdgeInsets.only(top: 10.h),
+                    
+                     alignment: Alignment.center,
+                     decoration: BoxDecoration(
+                     
+                  
+                     ),
+                     child: Text("Include all Standard Offer with New Offer", 
+                     style: GoogleFonts.robotoSerif(
+                      color: Colors.black, 
+                      fontSize: 10.sp, fontWeight: FontWeight.w500
+                     ),),
+                    ),
+
+       Container(
+                      width: 225.w,
+                      margin: EdgeInsets.only(top: 5.h),
+                       padding: EdgeInsets.symmetric(horizontal: 8.w),
+                     alignment: Alignment.center,
+                     decoration: BoxDecoration(
+                     
+                  
+                     ),
+                     child: Text("** All offer is specified for specific Client Category", 
+                     style: GoogleFonts.robotoSerif(
+                      color: Colors.black, 
+                      fontSize: 10.sp, fontWeight: FontWeight.normal
+                     ),),
+                    ),
+                    
+       Container(
+                      width: 225.w,
+                      margin: EdgeInsets.only(top: 5.h),
+                     padding: EdgeInsets.symmetric(horizontal: 8.w),
+                     alignment: Alignment.center,
+                     decoration: BoxDecoration(
+                     
+                  
+                     ),
+                     child: Text("** Only admin can upgrade the package & can manually assign point with any merchant.", 
+                     style: GoogleFonts.robotoSerif(
+                      color: Colors.black, 
+                      fontSize: 10.sp, fontWeight: FontWeight.normal
+                     ),),
+                    ),
                         ],
                       ),
-                    );
-                  },
+                    ),
+
+                      Container(
+                      width: 70.w,
+                      height: 90.h,
+                      color: Colors.amberAccent,
+                      child: Image.asset("assets/reputation1.png"),
+                    )
+                  ],
                 ),
               ),
-            ),
-            
-                      Container(
-                      height: 120.h,
-                    
-                      decoration: BoxDecoration(
-                        color: Colors.white
-                      ),
-                      child: Column(
-                        children: [
-                           Container(
-                                          alignment: Alignment.center,
-                                          height: 39.h,
-                                         
-                                          width: 120.w,
-                                          decoration: BoxDecoration(
-                                            color: Color(0xffFBBC04),
-                                          ),
-                                          child: Text(
-                                            "Premium",
-                                            style: GoogleFonts.robotoSerif(
-                                                fontSize: 18.sp,
-                                                fontWeight: FontWeight.w600,
-                                                color: Colors.white),
-                                          )),
-                                        
-                                           Container(
-                                          alignment: Alignment.center,
-                                          height: 39.h,
-                                         
-                                      
-                                          decoration: BoxDecoration(
-                                        
-                                          ),
-                                          child: Text(
-                                            "Include all Standard Offer with New Offer",
-                                            style: GoogleFonts.robotoSerif(
-                                                fontSize: 15.sp,
-                                                fontWeight: FontWeight.w600,
-                                                color: Colors.black),
-                                          )),
-                                           Container(
-                                          alignment: Alignment.center,
-                                          height: 39.h,
-                                         
-                                      
-                                          decoration: BoxDecoration(
-                                          
-                                          ),
-                                          child: Text(
-                                            "** All offer is specified for specific Client Category. ",
-                                            style: GoogleFonts.robotoSerif(
-                                                fontSize: 13.sp,
-                                                fontWeight: FontWeight.w600,
-                                                color: Colors.black),
-                                          )),
-                        ],
-                      ),
-                    )
+            )
           ],
-        ),
+        )
       ),
     );
-  }
-}
-
-class Clip1Clipper extends CustomClipper<Path> {
-  Path getClip(Size size) {
-    Path path = Path();
-
-    path.lineTo(size.width, size.height);
-    path.lineTo(size.width, 0);
-    return path;
-  }
-
-  @override
-  bool shouldReclip(covariant CustomClipper<Path> oldClipper) {
-    // TODO: implement shouldReclip
-    throw UnimplementedError();
   }
 }
